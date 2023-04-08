@@ -6,12 +6,12 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:24:19 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 07:07:57 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/03/27 06:49:50 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../operations/operations.h"
+#include "../inc/push_swap.h"
 
 
 void    ra(t_all *all)

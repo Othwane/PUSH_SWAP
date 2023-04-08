@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 22:18:46 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 07:11:11 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/07 22:28:21 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include<unistd.h>
 
 int		ft_isalpha(int c);
-int		ft_isdigit(int c);
+int		ft_isdigit(char x);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_isalnum(int c);

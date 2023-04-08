@@ -6,22 +6,23 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:24:32 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 07:07:40 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/03/31 03:06:23 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../operations/operations.h"
+#include "../inc/push_swap.h"
 
 void    pa(t_all *all)
 {
     t_node *temp;
 
     if(!all->b_stack)
-        return (NULL);
+        return ;
     temp = all->b_stack;
     all->b_stack = all->b_stack->next;
     temp->next = all->a_stack;
     all->a_stack = temp;
+    all->size--;
 }
 
 void    pb(t_all *all)
@@ -29,9 +30,10 @@ void    pb(t_all *all)
     t_node *temp;
 
     if(!all->a_stack)
-        return (NULL);
+        return ;
     temp = all->a_stack;
     all->a_stack = all->a_stack->next;
     temp->next = all->b_stack;
     all->b_stack = temp;
+    all->size--;
 }

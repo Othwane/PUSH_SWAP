@@ -6,11 +6,11 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:30:17 by omajdoub          #+#    #+#             */
-/*   Updated: 2022/10/31 15:37:45 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/03 22:48:48 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static	int	count_words(const char *s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:37:03 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 07:08:02 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/03/27 08:16:51 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../operations/operations.h"
+#include "../inc/push_swap.h"
 
 void    rra(t_all *all)
 {
@@ -23,6 +23,9 @@ void    rra(t_all *all)
         while (temp->next->next)
             temp = temp->next;
         l_elem = temp->next;
+        temp->next = NULL;
+        l_elem->next = all->a_stack;
+        all->a_stack = l_elem;
     }
 }
 
@@ -37,6 +40,9 @@ void    rrb(t_all *all)
         while (temp->next->next)
             temp = temp->next;
         l_elem = temp->next;
+        temp->next = NULL;
+        l_elem->next = all->b_stack;
+        all->b_stack = l_elem;
     }
 }
 

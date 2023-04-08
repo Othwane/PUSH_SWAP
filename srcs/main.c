@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 22:54:37 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/25 05:26:35 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/07 22:33:36 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@
 int main(int argc, char **argv)
 {
     t_all all;
-
-    fill_stack(argc, argv, &all);
-    // while(all.a_stack)
-    // {
-    //     printf("%d\n", all.a_stack->value);
-    //     all.a_stack = all.a_stack->next;
-    // }
-}
+    
+    if (argc > 1)
+    {
+        fill_stemp(argc, argv, &all);
+        fill_stack(argc, argv, &all);
+    }
+} 

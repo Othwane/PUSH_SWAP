@@ -9,7 +9,7 @@
 
 #define MAXNT 2147483647
 #define MINNT -2147483648
-#define ZERO 0
+
 
 typedef	struct	s_all {
 	t_node *a_stack;
@@ -34,20 +34,41 @@ void    rrb(t_all *all);
 void    rrr(t_all *all);
 
 void    fill_stack(int argc, char **argv, t_all *all);
-// int 	ifsign(char x);
-int 	ifnum(char *string);
-int 	ifdup(t_all *all, int number);
+int 	cifsign(char x);
 int conditions(t_all *all, char **args, long long number);
-void    exit_s(t_all *all);
+// void    exit_s(t_all *all);
 
 void    f_case(t_all *all);
 // int len_s(char **argv);
-// int     smallest(t_all *all);
+
 char **fill_stemp(int argc, char **argv, t_all *all);
 // int check_c(char **args);
 
 int cifnum(char **argv);
 int cifdup(char **argv);
 int cifn_bigger_smaller(long long number);
+// int s_len(t_all *all);
+
+
+int smallest(t_node *stack, int index);
+
+// void    exit_s(t_all *all);
+
+int n_instack(t_all *all);
+
+
+void    howmanyargs(t_all *all);
+
+
+int checkifsorted(t_all *all);
+
+
+
+
+
+
+void    indexoperations(t_node *stack, int ssize);
+
+
 
 #endif

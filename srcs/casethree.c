@@ -6,123 +6,33 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 05:33:15 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/04/05 21:01:38 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/11 17:23:56 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-// void fcase(t_all *all)
-// {
-//     int min;
-//     int secmin;
-//     min = all->a_stack->value;
-//     if (all->a_stack->next->value < all->a_stack->next->next->value)
-//         secmin = all->a_stack->next->value;
-//     else
-//     {
-//           secmin = all->a_stack->next->next->value;
-//     }
-//     sa(all);
-//     while(all->a_stack)
-//     {
-//         printf("%d\n", all->a_stack->value);
-//         all->a_stack = all->a_stack->next;
-//     }
-// }
+void    twonumber_case(t_all *all)
+{
+    if (all->a_stack->value < all->a_stack->next->value)
+            return ;
+        ra(all);
+}
 
-// void    scase(t_all *all)
-// {
-//     int min;
-//     int secmin;
-//     min = all->a_stack->next->value;
-//     if (all->a_stack->value < all->a_stack->next->next->value)
-//         secmin = all->a_stack->value;
-//     else
-//         secmin = all->a_stack->next->next->value;
-//     printf("%d---%dhadii", min, secmin);  
-// }
+int n_instack(t_all *all)
+{
+    int i;
+    t_node *nnode;
 
-// void    tcase(t_all *all)
-// {
-//     int min;
-//     int secmin;
-//     min = all->a_stack->next->next->value;
-//     if (all->a_stack->next->value < all->a_stack->value)
-//        secmin = all->a_stack->next->value;
-//     else
-//         secmin = all->a_stack->value;
-//     printf("%d---%dhadiii", min, secmin);
-// }
-
-// void	casethree(t_all *all)
-// {
-//     int min;
-//     int secmin;
-//     //           first       <        second              && second    <     third
-//     if ((all->a_stack->value < all->a_stack->next->value) 
-//         && (all->a_stack->next->value < all->a_stack->next->next->value))
-//                     return ;
-//     //               first        <      second               &&  second > third 
-//     else if ((all->a_stack->value < all->a_stack->next->value) 
-//                 && (all->a_stack->next->value > all->a_stack->next->next->value))
-//                 {
-//                     rra(all);
-//                     sa(all);
-//                     while(all->a_stack)
-//                     {
-//                        printf("%d\n--", all->a_stack->value);
-//                         all->a_stack = all->a_stack->next;
-//                     }
-//                 }    
-//     //             first                     <         second             &&   second    <    third 
-//     else if ((all->a_stack->value > all->a_stack->next->value) 
-//                 && (all->a_stack->next->value < all->a_stack->next->next->value))
-//                 {
-//                     sa(all);
-//                     while(all->a_stack)
-//                     {
-//                        printf("---%d\n", all->a_stack->value);
-//                         all->a_stack = all->a_stack->next;
-//                     }
-//                 }
-//     else if ((all->a_stack->value > all->a_stack->next->value) 
-//             && (all->a_stack->next->value < all->a_stack->next->next->value) 
-//             && (all->a_stack->value < all->a_stack->next->next->value))
-//     {
-//         ra(all);
-//        while(all->a_stack)
-//         {
-//             printf("--*--%d\n", all->a_stack->value);
-//             all->a_stack = all->a_stack->next;
-//         }
-//     }
-// }
-
-// int     smallest(t_all *all)
-// {
-//     t_node *mini_n;
-//     t_node *temp;
-//     int ssize;
-    
-//     mini_n = all->a_stack;
-//     temp = all->a_stack->next;
-//     ssize = all->size;
-//     while (ssize != ZERO)
-//     {
-//         if (mini_n->value > temp->value && mini_n->next != NULL)
-//         {
-//             mini_n = mini_n->next;
-//             if (temp->next != NULL)
-//                 temp = temp->next;
-//         }
-//         else if (mini_n->value < temp->value && temp->next != NULL)
-//             temp = temp->next;
-//         ssize--;
-//     }
-//     return (mini_n->value);
-// }
-
+    i = 0;
+    nnode = all->a_stack;
+    while (nnode)
+    {
+        i++;
+        nnode = nnode->next;
+    }
+    return (i);
+}
 
 void    f_case(t_all *all)
 {
@@ -131,78 +41,97 @@ void    f_case(t_all *all)
             return ;
     if (all->a_stack->value > all->a_stack->next->value 
         && all->a_stack->value < all->a_stack->next->next->value)
-                    {
-                        sa(all);
-                        while (all->a_stack)
-                        {
-                            printf("\n-%d----\n",all->a_stack->value);
-                            all->a_stack = all->a_stack->next;
-                        }
-                    }
-    else if (all->a_stack->value > all->a_stack->next->value 
-            && all->a_stack->value > all->a_stack->next->next->value
+                sa(all);
+    else if (all->a_stack->value > (all->a_stack->next->value && all->a_stack->next->next->value)
             && all->a_stack->next->value > all->a_stack->next->next->value)
                 {
                     sa(all);
                     rra(all);
-                    while (all->a_stack)
-                    {
-                        printf("\n-%d-=\n",all->a_stack->value);
-                        all->a_stack = all->a_stack->next;
-                    }
-                    
                 }
     else if (all->a_stack->value > (all->a_stack->next->value && all->a_stack->next->next->value)
         && all->a_stack->next->value < all->a_stack->next->next->value)
-                {
                     ra(all);
-                    while (all->a_stack)
-                    {
-                        printf("\n-%d--\n",all->a_stack->value);
-                        all->a_stack = all->a_stack->next;
-                    }
-                }
     else if (all->a_stack->next->value > (all->a_stack->value && all->a_stack->next->next->value)
             && all->a_stack->value < all->a_stack->next->next->value)
         {
             sa(all);
-            ra(all);
-            while (all->a_stack)
-            {
-                printf("\n-%d-+\n",all->a_stack->value);
-                all->a_stack = all->a_stack->next;
-            }
+            ra(all);            
         }
     else
-            {
-                rra(all);
-                while (all->a_stack)
-                {
-                    printf("\n-%d-*\n",all->a_stack->value);
-                    all->a_stack = all->a_stack->next;
-                }
-            }
+            rra(all);
 }
 
-// void    s_case(t_all *all)
-// {
-//     int x;
-//     int number;
-//     int i = 0;
-//     x = all->size;
-//     printf("%d+-+", x);
-//     while(x > 3)
-//     {
-//         number = smallest(all);
-//         if (number == all->a_stack->value)
-//             {
-//                 pb(all);
-//                 number = smallest(all);
-//                 if (number == all->a_stack->value)
-//                     pb(all);
-//                 ra(all);
-//             }
-//         ra(all);
-//         x--;
-//     }
-// }
+int checkifsorted(t_all *all)
+{
+    t_node *temp;
+
+    temp = all->a_stack;
+    while (temp->next)
+    {
+        if (temp->value < temp->next->value
+            && temp->next->value < temp->next->next->value)
+            {
+                temp = temp->next;
+                if (!temp->next)
+                    return (0);
+                break;
+            }
+        else
+            return (1);
+    }
+    return (0);
+}
+
+
+void    s_case(t_all *all)
+{
+    int i;
+    int index;
+    int findex;
+
+    i = 0;
+    findex = 1;
+    while (i < 2)
+    {
+        index = smallest(all->a_stack, findex);
+        if (all->a_stack->index == findex)
+        {
+            pb(all);
+            i++;
+        }
+        else if (index < 3)
+            ra(all);
+        rra(all);
+    }
+}
+
+
+int smallest(t_node *stack, int index)
+{
+    int i;
+
+    i = 1;
+    while (stack->next)
+    {
+        if (stack->index != index)
+        {
+            i++;
+            stack = stack->next;
+        }
+    }
+    return (i);
+}
+
+void    howmanyargs(t_all *all)
+{
+    if (ft_lstsize(all->a_stack) == 2)
+        twonumber_case(all);
+    else if (ft_lstsize(all->a_stack) == 3)
+        f_case(all);
+    else if (ft_lstsize(all->a_stack) == 5)
+        s_case(all);
+    // else if (ft_lstsize(all->a_stack)  <= 100)
+    //     t_case();
+//     else if (ft_lstsize(all->a_stack)  <= 500)
+//         l_case();
+}

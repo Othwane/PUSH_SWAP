@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:24:32 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/31 03:06:23 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/10 21:02:53 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void    pa(t_all *all)
     temp->next = all->a_stack;
     all->a_stack = temp;
     all->size--;
+    write(1,"pa\n",3);
 }
 
 void    pb(t_all *all)
@@ -36,4 +37,5 @@ void    pb(t_all *all)
     temp->next = all->b_stack;
     all->b_stack = temp;
     all->size--;
+    write(1,"pb\n",3);
 }

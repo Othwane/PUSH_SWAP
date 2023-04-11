@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:37:03 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/27 08:16:51 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/10 21:01:33 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void    rra(t_all *all)
         temp->next = NULL;
         l_elem->next = all->a_stack;
         all->a_stack = l_elem;
+        write(1,"rra\n",3);
     }
 }
 
@@ -43,6 +44,7 @@ void    rrb(t_all *all)
         temp->next = NULL;
         l_elem->next = all->b_stack;
         all->b_stack = l_elem;
+        write(1,"rrb\n",3);
     }
 }
 
@@ -50,4 +52,5 @@ void    rrr(t_all *all)
 {
     rra(all);
     rrb(all);
+    write(1,"rrr\n",3);
 }

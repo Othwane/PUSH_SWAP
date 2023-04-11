@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:24:19 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/27 06:49:50 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/10 20:59:19 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void    ra(t_all *all)
             temp = temp->next;
         temp->next = f_elem;
         temp->next->next = NULL;
+        write(1,"ra\n",3);
     }
 }
 
@@ -45,6 +46,7 @@ void    rb(t_all *all)
             temp = temp->next;
         temp->next = f_elem;
         temp->next->next = NULL;
+        write(1,"rb\n",3);
     }
 }
 
@@ -52,4 +54,5 @@ void    rr(t_all *all)
 {
     ra(all);
     rb(all);
+    write(1,"rr\n",3);
 }

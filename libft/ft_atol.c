@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 04:36:52 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 04:39:45 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:07:02 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 long long	ft_atol(const char *s)
 {
-	int	i;
-	long long   result;
-	long long   sign;
+	int			i;
+	long long	result;
+	long long	sign;
 
 	i = 0;
 	sign = 1;

@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:29:56 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/04/07 22:16:41 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:08:05 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(char x)
 {
-    if (x >= 48 && x <= 57)
-         return (1);
-    return (0);
+	if (x >= 48 && x <= 57)
+		return (1);
+	return (0);
 }

@@ -6,31 +6,37 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:31:46 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/04/07 20:54:29 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:10:56 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
+	int		j;
 	char	*new_s;
 
 	i = 0;
-	if (!s1 || !s2)
+	j = 0;
+	if (!s1 && !s2)
 		return (NULL);
 	new_s = malloc(ft_strlen(s1) + ft_strlen(s2) + 2);
-	if (!new_s)
-		return (NULL);
-	while (*s1)
-			new_s[i++] = *s1++;
-	new_s[i] = ' ';
-	i++;
-	while (*s2)
-		new_s[i++] = *s2++;
-	// new_s[i] = ' ';
-	i++;
-	new_s[i] = '\0';
+	while (s1[j])
+	{
+		new_s[j] = s1[j];
+		j++;
+	}
+	new_s[j] = ' ';
+	j++;
+	while (s2[i])
+	{
+		new_s[j] = s2[i];
+		j++;
+		i++;
+	}
+	new_s[j] = '\0';
+	free(s1);
 	return (new_s);
 }

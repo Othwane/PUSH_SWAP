@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 01:01:38 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/03/21 07:26:07 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/13 21:45:03 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ t_node	*ft_lstlast(t_node *lnode)
 	if (!lnode)
 		return (0);
 	while (lnode->next)
-	{
 		lnode = lnode->next;
-	}
 	return (lnode);
 }

@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 16:30:17 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/04/03 22:48:48 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/14 02:09:05 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,13 +80,3 @@ char	**ft_split(char const *s, char c)
 	str = ft_mini_split(str, s, c, words);
 	return (str);
 }
-// #include <stdio.h>
-// int main()
-// {
-//     char c[] = "      split       this for   me  !       ";
-//     char **s = ft_split(c, ' ');
-//     int count = count_words(c, ' ');
-//     printf("%d\n", count);
-//     for (int i = 0; i < 5; i++)
-//         printf("%s\n", s[i]);
-// }

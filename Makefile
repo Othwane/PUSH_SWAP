@@ -27,7 +27,7 @@ SRCS =	operations/push.c \
 	libft/ft_atol.c \
 	libft/ft_putchar_fd.c \
 	libft/ft_strlen.c 
-	
+
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
@@ -42,3 +42,4 @@ fclean: clean
 	@$(RM) $(NAME)
 
 re: fclean all
+

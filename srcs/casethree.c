@@ -6,7 +6,7 @@
 /*   By: omajdoub <omajdoub@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 05:33:15 by omajdoub          #+#    #+#             */
-/*   Updated: 2023/04/16 04:46:23 by omajdoub         ###   ########.fr       */
+/*   Updated: 2023/04/28 21:40:24 by omajdoub         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void	s_case(t_all *all)
 	int	i;
 
 	i = 1;
+	if (!checkifsorted(all))
+		exit(0);
 	while (i <= 2)
 	{
 		if (all->a_stack->index == i)
